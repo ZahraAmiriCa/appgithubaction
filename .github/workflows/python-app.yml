@@ -2,7 +2,9 @@ name: Python CI
 
 on:
   push:
+    branches: [main]
   pull_request:
+    branches: [main]
 
 jobs:
   test:
@@ -10,17 +12,12 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Set up Python
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v6
         with:
-          python-version: "3.8"
-
-      - name: List files
-        run: |
-          pwd
-          ls -R
+          python-version: "3.11"
 
       - name: Install dependencies
         run: |
