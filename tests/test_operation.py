@@ -8,4 +8,4 @@ def test_add():
 
 def test_sub():
     assert subtract(5, 3) == 2
-    assert subtract(6, 6) == 0
+    assert subtract(9, 6) == 3
